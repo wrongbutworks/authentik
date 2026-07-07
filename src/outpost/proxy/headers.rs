@@ -74,7 +74,7 @@ fn set_upstream_authorization(
 ///
 /// authentik's own headers use dashes (`X-authentik-username`), so this never
 /// removes them, but it stops a client from smuggling an `X_authentik_username`
-/// that an upstream treating `_` and `-` alike (nginx, CGI/PHP) would honour in
+/// that an upstream treating `_` and `-` alike (nginx, CGI/PHP) would honor in
 /// place of the trusted dash header.
 pub(crate) fn remove_underscore_headers(headers: &mut HeaderMap) {
     let stale: Vec<HeaderName> = headers
