@@ -107,7 +107,10 @@ export class AuthenticatorValidateStageForm extends BaseStageForm<AuthenticatorV
 
             <ak-text-input
                 autofocus
-                label=${msg("Stage Name")}
+                label=${msg("Stage Name", {
+                    id: "stage.name.label",
+                    desc: "Label for the name field on a stage configuration form.",
+                })}
                 placeholder=${msg("Type a stage name...")}
                 required
                 name="name"

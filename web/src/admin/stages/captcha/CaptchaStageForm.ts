@@ -356,7 +356,10 @@ export class CaptchaStageForm extends BaseStageForm<CaptchaStage> {
                 )}
             </header>
             <ak-text-input
-                label=${msg("Stage Name")}
+                label=${msg("Stage Name", {
+                    id: "stage.name.label",
+                    desc: "Label for the name field on a stage configuration form.",
+                })}
                 required
                 name="name"
                 value="${this.instance?.name || "my-captcha-stage"}"
